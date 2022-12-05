@@ -1,5 +1,5 @@
 # CoverMyMeds_project
-Erdos Institute
+```Po-Wen: As a first approximation, below are the outlines of what we can write. Feel free to edit/change it if you have better ideas!```
 
 
 
