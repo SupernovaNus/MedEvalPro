@@ -13,16 +13,16 @@
 * Data cleaning
 
 ## Formulary (Victoria)
-* What is the formulary of each payer?
+* Key question: What is the formulary of each payer?
 * Results
 
 ## Classification (Ozkan, Ismail, Po-Wen)
-* PAs are approved or not?
+* Key question: How to predict if a PA will be approved or not?
 * Models
 * Why we chose the metric? Best models/results
 
 ## Time series analysis (Axel)
-* What are the claim/PA volumes in the future?
+* Key question: How to predict the claim/PA volumes in the future?
 * Models
 * Best models/results
 
