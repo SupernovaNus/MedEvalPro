@@ -19,7 +19,7 @@
 ## Classification (Ozkan, Ismail, Po-Wen)
 
 * The classification task:
-* The propose of this part is to solve the follwing classfication problem: predict if a PA is approved or not based on the following set of features:
+* The purpose of this part is to solve the following classfication problem: predict if a PA is approved or not based on the following set of features:
 * 
 
 
