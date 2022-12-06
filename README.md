@@ -80,6 +80,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 ## Future directions (Everyone)
 * What would we do if?
 
+* `Convoluntional Neural Netword`:
 
 
 
