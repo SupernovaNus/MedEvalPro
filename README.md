@@ -17,8 +17,18 @@
 * Results
 
 ## Classification (Ozkan, Ismail, Po-Wen)
-* Key question: How to predict if a PA will be approved or not?
-* Models
+* The classification task:
+The propose of this part is to solve the follwing classfication problem: predict if a PA is approved or not based on the following set of features:
+(1) 
+(2)
+(3)
+(4)
+(5)
+(6)
+
+
+* Models used:
+
 * Why we chose the metric? Best models/results
 
 ## Time series analysis (Axel)
