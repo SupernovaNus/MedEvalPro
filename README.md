@@ -22,7 +22,7 @@ The dataset we use in this project contains information of around 1.3 million cl
 * `pharmacy_claim_approved`: If the claim was approved by the payer, the value of this feature is assigned as `1`; otherwise, it is `0`. 
 
 
-For all claims rejected by patients’ payers, healthcare providers will have to submit prior authorizations (PAs) for their patients. The rejected claims with PAs are then reviewed by payers with more detailed information about patients and prescriptions. Such additional features associated with rejected claims are and whether or not PAs are approved are provided in file `dim_pa.csv`:
+For all claims rejected by patients’ payers, healthcare providers will have to submit prior authorizations (PAs) for their patients. The rejected claims with PAs are then reviewed by payers with more detailed information about patients and prescriptions. Such additional features associated with **_rejected claims_** are and whether or not PAs are approved are provided in file `dim_pa.csv`:
 
 * `dim_pa_id`: The unique identification number of the PA claims, which ranges from `1` to `555951`.
 * `correct_diagnosis`: If the provider contends that the patient has the correct diagnosis for the associated drug, the value is `1`; otherwise `0`.
