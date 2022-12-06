@@ -63,9 +63,9 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * Key question: How to predict if a PA will be approved or not?
 * Models:
 
-* Support Vector Machine Classifier:
-* Feedforward neural network:
-* Random forest with GridSearch:
+* `Support Vector Machine Classifier`:
+* `Feedforward neural network`:
+* `Random forest with GridSearch`:
 
 * Why we chose the metric? Best models/results
 
