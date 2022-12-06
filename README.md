@@ -2,29 +2,69 @@
 ```Po-Wen: As a first approximation, below are the outlines of what we can write. Feel free to edit/change it if you have better ideas!```
 
 
-
 ## Project Overview (Everyone)
 * Motivation of the problem we want to solve
 * Our approach
 * Our conclusions
 
+
+
+
 ## Dataset (Po-Wen)
-* Overview
-* Data cleaning
+
+### Overview
+The dataset we use in this project contains information of around 1.3 million claims. For each claim, the following features are provided in file ``dim_claims.csv``:
+
+* ``dim_claim_id``: The unique identification number of the claim, which ranges from 1 to 1335576.
+* ``bin``: The BIN identification number of the payer for the claim. There are 4 different BINs: 417380, 417740, 417614, and 999001.
+* ``drug``: The drug that was prescribed to the patient and associated with the claim. There are 3 types of drugs: A, B, and C.
+* ``reject_code``: Some claims in our dataset were directly approved by patients’ insurance companies or payers, while others were rejected due to various reasons. If a claim was rejected, it would be associated with a rejection code. There are 3 rejection codes in the dataset: 70, 75, and 76. If a claim was approved, the reject code is labeld as ``NaN``.
+* ``pharmacy_claim_approved``: If the claim was approved by the payer, the value of this feature is assigned as 1; otherwise, it is 0. 
+
+
+For all claims rejected by patients’ payers, healthcare providers will have to submit prior authorizations (PAs) for their patients. The rejected claims with PAs are then reviewed by payers with more detailed information about patients and prescriptions. Such additional features associated with rejected claims are and whether or not PAs are approved are provided in file ``dim_pa.csv``:
+
+* ``dim_pa_id``: The unique identification number of the PA claims, which ranges from 1 to 555951.
+* ``correct_diagnosis``: If the provider contends that the patient has the correct diagnosis for the associated drug, the value is 1; otherwise 0.
+* ``tried_and_failed``: If the patient has tried and failed alternative treatments, the value is 1; otherwise 0. 
+* ``contraindication``: If the patient has an associated contraindication for the medication requested, the value is 1; otherwise 0. 
+* ``pa_approved``: If the payer approved the PA of the rejected claim, the value is 1; otherwise 0.
+
+
+File ``dim_date.csv`` contains the calendar records of all claims:
+
+* ``dim_date_id``: Index for the record. 
+* ``date_val``: Year-Month-Day for the record. 
+* ``calendar_year``: Year for the record (integers). 
+* ``calendar_month``: Month of the year for the record (integers). 
+* ``calendar_day``: Day of the month for the record (integers). 
+* ``day_of_week``: The Nth day of the week (integers). 
+* ``is_weekday``: Monday through Friday $= 1$; otherwise $= 0$.
+* ``is_workday``: Monday through Friday and not holiday $= 1$; otherwise $= 0$.
+* ``is_holiday``: Holiday $= 1$; otherwise $= 0$. 
+
+
+File ``bridge.csv`` provides a table that bridges all information associated with ``dim_claim_id``, ``dim_pa_id``, and ``dim_date_id``.
+
+
+
+
+### Data cleaning
+
+
+
+
+
+
+
 
 ## Formulary (Victoria)
 * Key question: What is the formulary of each payer?
 * Results
 
 ## Classification (Ozkan, Ismail, Po-Wen)
-
-* The classification task:
-* The purpose of this part is to solve the following classfication problem: predict if a PA is approved or not based on the following set of features:
-* 
-
-
-* Models used:
-
+* Key question: How to predict if a PA will be approved or not?
+* Models
 * Why we chose the metric? Best models/results
 
 ## Time series analysis (Axel)
