@@ -61,16 +61,18 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 ## Classification (Ozkan, Ismail, Po-Wen)
 * Key question: How to predict if a PA will be approved or not?
-* Models
+* Models:
+
+* Support Vector Machine Classifier:
+* Feedforward neural network:
+* Random forest with GridSearch:
+
 * Why we chose the metric? Best models/results
 
 ## Time series analysis (Axel)
 * Key question: How to predict the claim/PA volumes in the future?
 * Models:
 
-* Support Vector Machine Classifier:
-* Feedforward neural network:
-* Random forest with GridSearch:
 
 
 * Best models/results
