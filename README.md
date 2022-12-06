@@ -34,10 +34,7 @@ For all claims rejected by patients’ payers, healthcare providers will have to
 File `dim_date.csv` contains the calendar records of all claims:
 
 * `dim_date_id`: Index for the record. 
-* `date_val`: Year-Month-Day for the record. 
-* `calendar_year`: Year for the record (integers). 
-* `calendar_month`: Month of the year for the record (integers). 
-* `calendar_day`: Day of the month for the record (integers). 
+* `date_val` and `calendar_year`/`calendar_month`/`calendar_day`: Year-Month-Day for the record. 
 * `day_of_week`: The Nth day of the week (integers). 
 * `is_weekday`: Monday through Friday $=$ `1`; otherwise $=$ `0`.
 * `is_workday`: Monday through Friday and not holiday $=$ `1`; otherwise $=$ `0`.
