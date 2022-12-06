@@ -66,7 +66,13 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 ## Time series analysis (Axel)
 * Key question: How to predict the claim/PA volumes in the future?
-* Models
+* Models:
+
+* Support Vector Machine Classifier:
+* Feedforward neural network:
+* Random forest with GridSearch:
+
+
 * Best models/results
 
 ## Future directions (Everyone)
