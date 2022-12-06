@@ -1,5 +1,5 @@
 # CoverMyMeds_project
-```Po-Wen: As a first approximation, below are the outlines of what we can write. Feel free to edit/change it if you have better ideas!```
+`Po-Wen: As a first approximation, below are the outlines of what we can write. Feel free to edit/change it if you have better ideas!`
 
 
 ## Project Overview (Everyone)
@@ -46,7 +46,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 
 
-### Data cleaning
+### Some insights
 
 
 
