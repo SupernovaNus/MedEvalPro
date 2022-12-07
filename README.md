@@ -70,7 +70,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * Why we chose the metric? Best models/results
 
 In addition to these machine learning models, we computed PA approval rates using contingency tables and build a model by using different thresholds with the approval rates. We observed that using all six categorical features we used in the above models results in a contingency table with cells with 0 counts, and those cells cannot be used to compute approval rates. So, we used the feature importance scores we get from the best model to get an importance order among the subsets of features, and used it to get a contingency table with a nonempty count for any given feature string. The following is the top 4 feature subsets in this order:
-* All features > All features except "correct_diagnosis" > All features except "bin_no" > All features except "correct_diagnosis" & "bin_no" *
+**All features > All features except "correct_diagnosis" > All features except "bin_no" > All features except "correct_diagnosis" & "bin_no"**
 
 We observe that the contingency table built from all features except "correct_diagnosis" & "bin_no" is full, so we only needed to go this deep in the order to get all the approval rates. Then we get the metrics for this model with different thresholds and saw that... (Results)
 
