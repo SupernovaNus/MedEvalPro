@@ -1,11 +1,18 @@
-# CoverMyMeds_project
-`Po-Wen: As a first approximation, below are the outlines of what we can write. Feel free to edit/change it if you have better ideas!`
-
+# MedEvalPro: A forecasting tool for medical decisions
 
 ## Project Overview (Everyone)
+CoverMyMeds is a healthcare technology company that aims to improve patients' access to medications by simplifying the process of connecting with the healthcare network. By doing so, it can speed up the time it takes for patients to receive therapy and reduce the number of prescriptions that will not be approved by the health insurance payers. For example, it provides the electronic prior authorization (ePA) service that could tremendously boost the process of PA filing with a convenient portal-based experience.
+
+An important we can try to discover the formulary status of certain drugs for certain payers, which is very valuable data in this market. We can also try to predict whether a PA will be needed at the point of prescribing to prevent a patient from going to the pharmacy, only to return home empty handed. We can predict whether a PA will be successful based upon claims data, or data included on the ePA, to prevent patients from waiting on a decision, only to end up having to switch to another therapy if the PA is rejected. We can also forecast future monthly PA volume as a function of historical volume to generate more accurate budgets.
+
+mock data provided by CoverMyMeds
+
+
+
 * Motivation of the problem we want to solve
 * Our approach
 * Our conclusions
+
 
 
 
@@ -18,7 +25,7 @@ The dataset we use in this project contains information of around 1.3 million cl
 * `dim_claim_id`: The unique identification number of the claim, which ranges from `1` to `1335576`.
 * `bin`: The BIN identification number of the payer for the claim. There are 4 different BINs: `417380`, `417740`, `417614`, and `999001`.
 * `drug`: The drug that was prescribed to the patient and associated with the claim. There are 3 types of drugs: `A`, `B`, and `C`.
-* `reject_code`: Some claims in our dataset were directly approved by patients’ insurance companies or payers, while others were rejected due to various reasons. If a claim was rejected, it would be associated with a rejection code. There are 3 rejection codes in the dataset: `70`, `75`, and `76`. If a claim was approved, the rejection code is labeld as ``NaN``.
+* `reject_code`: Some claims in our dataset were directly approved by patients’ insurance companies or payers, while others were rejected due to various reasons. If a claim was rejected, it would be associated with a rejection code. There are 3 rejection codes in the dataset: `70`, `75`, and `76`. If a claim was approved, the rejection code is labeld as `NaN`.
 * `pharmacy_claim_approved`: If the claim was approved by the payer, the value of this feature is assigned as `1`; otherwise, it is `0`. 
 
 
@@ -42,14 +49,6 @@ File `dim_date.csv` contains the calendar records of all claims:
 
 
 File `bridge.csv` provides a table that bridges all information associated with `dim_claim_id`, `dim_pa_id`, and `dim_date_id`.
-
-
-
-
-### Some insights
-
-
-
 
 
 
