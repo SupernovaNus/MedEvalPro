@@ -1,11 +1,21 @@
 # MedEvalPro: A forecasting tool for medical decisions
 
 ## Project Overview (Everyone)
-CoverMyMeds is a healthcare technology company that aims to improve patients' access to medications by simplifying the process of connecting with the healthcare network. By doing so, it can speed up the time it takes for patients to receive therapy and reduce the number of prescriptions that will not be approved by the health insurance payers. For example, it provides the electronic prior authorization (ePA) service that could tremendously boost the process of PA filing with a convenient portal-based experience.
+CoverMyMeds is a healthcare technology company that aims to improve patients' access to medications by simplifying the process of connecting with the healthcare network. It can speed up the time for patients to receive therapy and reduce the number of prescriptions that will not be approved by the health insurance payers. Furthermore, it provides the electronic prior authorization (ePA) service for the medical claims rejected by payers, which could tremendously boost the process of PA filing with a convenient portal-based experience. 
 
-An important we can try to discover the formulary status of certain drugs for certain payers, which is very valuable data in this market. We can also try to predict whether a PA will be needed at the point of prescribing to prevent a patient from going to the pharmacy, only to return home empty handed. We can predict whether a PA will be successful based upon claims data, or data included on the ePA, to prevent patients from waiting on a decision, only to end up having to switch to another therapy if the PA is rejected. We can also forecast future monthly PA volume as a function of historical volume to generate more accurate budgets.
+Taking advantage of the historical medical data associated with patients' claims and PAs, it is possible to extract valuable information and make practical applications to benefit customers. For example, we can infer payers' formulary of drugs and how payers make decisions based on it and medical prescriptions. This is 
 
-mock data provided by CoverMyMeds
+
+Here, we utilitze the mock data of medical claims provided by CoverMyMeds.
+
+* d
+* 
+
+
+we can attempt to determine the formulary status of certain drugs for specific payers. We can also predict whether a prior authorization (PA) will be required at the time of prescribing to avoid a situation where a patient goes to the pharmacy but is unable to obtain the medication. Using claims data or information included in the electronic PA, we can predict the likelihood of a PA being approved, allowing patients to avoid delays or the need to switch to a different therapy if the PA is denied. Additionally, we can use historical PA volume to forecast future monthly volume and improve budgeting accuracy.
+
+
+we can try to discover the formulary status of certain drugs for certain payers, which is very valuable data in this market. We can also try to predict whether a PA will be needed at the point of prescribing to prevent a patient from going to the pharmacy, only to return home empty handed. We can predict whether a PA will be successful based upon claims data, or data included on the ePA, to prevent patients from waiting on a decision, only to end up having to switch to another therapy if the PA is rejected. We can also forecast future monthly PA volume as a function of historical volume to generate more accurate budgets.
 
 
 
@@ -42,7 +52,7 @@ File `dim_date.csv` contains the calendar records of all claims:
 
 * `dim_date_id`: Index for the record. 
 * `date_val` and `calendar_year`/`calendar_month`/`calendar_day`: Year-Month-Day for the record. 
-* `day_of_week`: The Nth day of the week (integers). 
+* `day_of_week`: The *n*th day of the week (integers). 
 * `is_weekday`: Monday through Friday $=$ `1`; otherwise $=$ `0`.
 * `is_workday`: Monday through Friday and not holiday $=$ `1`; otherwise $=$ `0`.
 * `is_holiday`: Holiday $=$ `1`; otherwise $=$ `0`. 
