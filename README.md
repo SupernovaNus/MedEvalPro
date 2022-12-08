@@ -58,7 +58,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 ## Classification (Ozkan, Ismail, Po-Wen)
 * Key question: How to predict if a PA will be approved or not?
-* Metric used:
+* Metric used: In our contest, it is crucial for any model to minimize the false positives since it safer 
 * Models:
 
 * `Support Vector Machine Classifier`:
