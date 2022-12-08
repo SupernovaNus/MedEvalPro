@@ -5,13 +5,12 @@
 
 Taking advantage of the historical medical data associated with patients' claims and PAs, it is possible to extract valuable information and make practical applications to benefit customers. For example, we can infer payers' formulary of drugs and how payers make decisions based on it and medical prescriptions.
 
-Here, **Medical Evaluation Prophet (MedEvalPro)** utilitzes the mock data of medical claims provided by CoverMyMeds to 
-enables healthcare providers to 
+Through this project, we provide **Medical Evaluation Prophet (MedEvalPro)**, a forecasting tool that enables healthcare providers to make efficient decisions on whether or not a PA is needed, significantly enhance the chance of PA approval, and predict the trend of future demands on PAs. We utilitze the mock data of medical claims provided by CoverMyMeds to perform the following tasks:
 
 * *Discover the formulary of certain drugs for payers.*
-* *Predict whether a medical claim will be approved by payers.*
+* *Infer which types of medical claims will be approved by payers.*
 * *Predict whether a PA for rejected claims will be approved by payers.*
-* *Forecast future monthly PA volume.*
+* *Forecast future volume of PAs.*
 
 
 
