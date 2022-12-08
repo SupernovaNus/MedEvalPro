@@ -16,7 +16,6 @@ Through this project, we provide **Medical Evaluation Prophet (MedEvalPro)**, a 
 
 ## Dataset (Po-Wen)
 
-### Overview
 The dataset we use in this project contains information of around 1.3 million claims. For each claim, the following features are provided in file `dim_claims.csv`:
 
 * `dim_claim_id`: The unique identification number of the claim, which ranges from `1` to `1335576`.
