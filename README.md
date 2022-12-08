@@ -5,13 +5,13 @@
 
 Taking advantage of the historical medical data associated with patients' claims and PAs, it is possible to extract valuable information and make practical applications to benefit customers. For example, we can infer payers' formulary of drugs and how payers make decisions based on it and medical prescriptions.
 
-**Medical Evaluation Prophet (MedEvalPro)** utilitzes the mock data of medical claims provided by CoverMyMeds.
+Here, **Medical Evaluation Prophet (MedEvalPro)** utilitzes the mock data of medical claims provided by CoverMyMeds to 
+enables healthcare providers to 
 
-* d
-* 
-
-we can try to discover the formulary status of certain drugs for certain payers, which is very valuable data in this market. We can also try to predict whether a PA will be needed at the point of prescribing to prevent a patient from going to the pharmacy, only to return home empty handed. We can predict whether a PA will be successful based upon claims data, or data included on the ePA, to prevent patients from waiting on a decision, only to end up having to switch to another therapy if the PA is rejected. We can also forecast future monthly PA volume as a function of historical volume to generate more accurate budgets.
-
+* *Discover the formulary of certain drugs for payers.*
+* *Predict whether a medical claim will be approved by payers.*
+* *Predict whether a PA for rejected claims will be approved by payers.*
+* *Forecast future monthly PA volume.*
 
 
 
