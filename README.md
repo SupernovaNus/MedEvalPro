@@ -65,7 +65,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * `Feedforward neural network`: We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
 `rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`, `is_holiday`, `is_weekday`, `is_workday`
 
-* The model consists of two layers of 50 and 20 layers respectively and uses the ‘relu’ function as the activation function. This model acheives an F1 score (...) of : when trained ... The performance of this simple neural network is comparable to almost every model we have tried.
+This model consists of two layers of 50 and 20 layers respectively and uses the ‘relu’ function as the activation function. This model acheives an F1 score (...) of : when trained ... The performance of this simple neural network is comparable to almost every model we have tried.
 
 * `Random forest with GridSearch`:
 
