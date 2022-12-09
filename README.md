@@ -95,6 +95,8 @@ The feedforward neural networkThis consists of two layers of 50 and 20 layers re
 
 ![TSNE_feedforward_network](https://user-images.githubusercontent.com/81845143/206777035-40d192db-76a2-4be9-b889-12a55669a7ee.png)
 
+Is our best model capable of separating the claims based on a given feature?
+We used the TSNE (t-distributed stochastic neighbor embedding) algorithm to reduce the dimension of the last layer of the network, which is a 20 dimensional array. This allows us to visualize how the model performs the classificstion task. For example, based on the figure above our feedforward network seems to isolate the claims containing drugs A and B relatively well.
 
 
 
