@@ -92,8 +92,6 @@ With our data, we train the following classification models:
 * 'XGB Classifier': See classification/XGBoostGridSearchCV.ipynb
 * 'Feedforward neural network': our feedforward neural network consists of two layers of 50 and 20 nodes respectively and uses the rectifier function as the activation function.
 
-The input for our classification models is an 8-dimensional array containing the categorical entries corresponding to the following features:
-`rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number`
 
 
 **Classifying claims:**
@@ -116,6 +114,9 @@ Surprisingly, it turns out that we can actually do an excellent job on this task
 
 With all rejected data, we can also predict what kind of PAs will be approved or rejected. 
 We have the results comparing above models on a single train-test split on the whole dataset in classification/AllModelsComparison.ipynb
+The input for our classification models is an 8-dimensional array containing the categorical entries corresponding to the following features:
+`rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number.` 
+
 In summary, for our metric to choose the final model, we did not use accuracy because the dataset was imbalanced, having 73% PA approval rate overall. For this classification problem, false positive is worse than a false negative, as classifying a to-be-rejected PA claim as otherwise and filing the PA claim would put an unnecessary cost on the company. So, precision is our most important metric to maximize. However, the naive model that rejects every PA claim has 100% precision, so we need another metric. We decided to use a *weighted harmonic mean of precision and recall, weighed more on the precision side (2-to-1)*, which can be thought of as a *weighted f1 score*. With this metric, the *Feedforward neural network model* turned out to have the best performance. 
 
 
