@@ -112,7 +112,7 @@ We observe that the contingency table built from all features except "correct_di
 
 * Best models/results
 
-## Future directions (Everyone)
+## Future Work (Everyone)
 **Convolutional Neural Network (CNN):**
 * Transform the input array corresponding to any given claim to an image-like input
 * Use different sequential treatments throughout the different layers of the network to make the model more sensitive to certain key features
