@@ -61,14 +61,12 @@ File `bridge.csv` provides a table that bridges all information associated with 
 **Results:**
 
 
-![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_1.png)
-![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_2.png)
-![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_3.png)
-![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_4.png)
+<img src="https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_1.png" width="500">
+<img src="https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_2.png" width="500">
+<img src="https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_3.png" width="500">
+<img src="https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_4.png" width="500">
 
-
-
-![alt text](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/formulary_table.png)
+<img src="https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/formulary_table.png" width="900">
 
 
 
@@ -76,7 +74,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 
 ## Classification 
-* Key question: How to predict if a PA will be approved or not?
+* Key question: How to predict if a claim or PA will be approved or not?
 
 **Models:**
 
@@ -90,19 +88,18 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * 'Linear Discriminant Analysis': Default
 * 'CatBoost Classifier': See classification/CatBoostGridSearchCV.ipynb
 * 'XGB Classifier': See classification/XGBoostGridSearchCV.ipynb
-* 'Feedforward neural network'
+* 'Feedforward neural network': our feedforward neural network consists of two layers of 50 and 20 nodes respectively and uses the rectifier function as the activation function.
 
-
-
-**Embedding of the last layer of the neural network:**
-![alt text](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/ContingencyTableResults.png)
-
-
-
-We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
+We used a feedforward neural network with two hidden layers. The input is an 8-dimensional array containing the categorical entries corresponding to the following features:
 `rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number`
 
-The feedforward neural network consists of two layers of 50 and 20 nodes respectively and uses the rectifier function as the activation function. This is our best machine learning model: It achieves an F1 score 0.86 when trained on 80% of the dataset.
+
+**:**
+
+<img src="https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/all_claims_cv_scores_algorithm.jpg" width="600">
+
+
+
 
 **Embedding of the last layer of the neural network:**
 
@@ -119,7 +116,8 @@ We used the TSNE (t-distributed stochastic neighbor embedding) algorithm to redu
 ![alt text](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/AllModels.png)
 
 We have the results comparing above models on a single train-test split on the whole dataset in classification/AllModelsComparison.ipynb
-In summary, for our metric to choose the final model, we did not use accuracy because the dataset was imbalanced, having 73% PA approval rate overall. For this classification problem, false positive is worse than a false negative, as classifying a to-be-rejected PA claim as otherwise and filing the PA claim would put an unnecessary cost on the company. So, precision is our most important metric to maximize. However, the naive model that rejects every PA claim has 100% precision, so we need another metric. We decided to use a *weighted harmonic mean of precision and recall, weighed more on the precision side (2-to-1)*, which can be thought of as a *weighted f1 score*. With this metric, the *Feedforward neural network model* turned out to have the best performance.
+In summary, for our metric to choose the final model, we did not use accuracy because the dataset was imbalanced, having 73% PA approval rate overall. For this classification problem, false positive is worse than a false negative, as classifying a to-be-rejected PA claim as otherwise and filing the PA claim would put an unnecessary cost on the company. So, precision is our most important metric to maximize. However, the naive model that rejects every PA claim has 100% precision, so we need another metric. We decided to use a *weighted harmonic mean of precision and recall, weighed more on the precision side (2-to-1)*, which can be thought of as a *weighted f1 score*. With this metric, the *Feedforward neural network model* turned out to have the best performance. 
+
 
 **An Intuitive Model using PA Approval Rates Calculated from Contingency Tables:**
 
@@ -130,6 +128,9 @@ We observed that using all six categorical features we used in the above models 
 ![alt text](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/ContingencyTableResults.png)
 
 We observe that the contingency table built from all features except "correct_diagnosis" & "bin_no" is full, so we only needed to go this deep in the order to get all the approval rates. Then we get the weighted f1 scores for models with different thresholds, and show that the model with 60% threshold outperforms all other machine learning mothers we have investigated so far. This is caused by the fully categorical nature of the dataset.
+
+
+
 
 ## Time series analysis
 * Key question: How to predict the claim/PA volumes in the future?
