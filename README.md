@@ -3,7 +3,7 @@
 Ismail Abouamal, Po-Wen Chang, Özkan Demir, Axel La Salle, Victoria Uribe
 
 
-## Project Overview (Everyone)
+## Project Overview
 [CoverMyMeds](https://www.covermymeds.com/main/) is a healthcare technology company that aims to improve patients' access to medications by simplifying the process of connecting with the healthcare network. It can speed up the time for patients to receive therapy and reduce the number of prescriptions that will not be approved by the health insurance payers. Furthermore, it provides the electronic prior authorization (ePA) service for the medical claims rejected by payers, which could tremendously boost the process of PA filing with a convenient portal-based experience. 
 
 ![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/claim_approval_process.png)
@@ -15,7 +15,7 @@ Through this project, we provide **Medical Evaluation Prophet (MedEvalPro)**, a 
 ![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/project_outline.png)
 
 
-## Dataset (Po-Wen)
+## Dataset 
 
 The synthetic dataset we use in this project contains information of around 1.3 million claims. For each claim, the following features are provided in file `dim_claims.csv`:
 
@@ -49,7 +49,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 
 
-## Formulary (Victoria)
+## Formulary
 `reject_code`: 
 
 * `70` = drug is not covered by plan and is not on the payer’s formulary
@@ -67,10 +67,10 @@ File `bridge.csv` provides a table that bridges all information associated with 
 ![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_4.png)
 
 
-**45% of rejected claims were rejected with code 70**
+**Most rejected claims were rejected with code 70**
 
 
-## Classification (Ozkan, Ismail, Po-Wen)
+## Classification 
 * Key question: How to predict if a PA will be approved or not?
 
 **Models:**
@@ -117,7 +117,7 @@ We observed that using all six categorical features we used in the above models 
 
 We observe that the contingency table built from all features except "correct_diagnosis" & "bin_no" is full, so we only needed to go this deep in the order to get all the approval rates. Then we get the weighted f1 scores for models with different thresholds, and show that the model with 60% threshold outperforms all other machine learning mothers we have investigated so far. This is caused by the fully categorical nature of the dataset.
 
-## Time series analysis (Axel)
+## Time series analysis
 * Key question: How to predict the claim/PA volumes in the future?
 * Models:
 
@@ -125,7 +125,7 @@ We observe that the contingency table built from all features except "correct_di
 
 * Best models/results
 
-## Future Work (Everyone)
+## Future Work 
 **Convolutional Neural Network (CNN):**
 * Transform the input array corresponding to any given claim to an image-like input
 * Use different sequential treatments throughout the different layers of the network to make the model more sensitive to certain key features
