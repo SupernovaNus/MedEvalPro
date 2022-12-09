@@ -65,7 +65,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * `Feedforward neural network`: We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
 `rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number`
 
-This model consists of two layers of 50 and 20 layers respectively and uses the ‘relu’ function as the activation function. This model acheives an F1 score 0.86 when trained on 80% of the dataset.
+This model consists of two layers of 50 and 20 nodes respectively and used the rectifier function as an activation function.
 
 In addition to these machine learning models, we computed PA approval rates using contingency tables and build a model by using different thresholds with the approval rates. We observed that using all six categorical features we used in the above models results in a contingency table with cells with 0 counts, and those cells cannot be used to compute approval rates. So, we used the feature importance scores we get from the best model to get an importance order among the subsets of features, and used it to get a contingency table with a nonempty count for any given feature string. The following is the top 4 feature subsets in this order:
 **All features > All features except "correct_diagnosis" > All features except "bin_no" > All features except "correct_diagnosis" & "bin_no"**
