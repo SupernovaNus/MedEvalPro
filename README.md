@@ -4,15 +4,13 @@
 ## Project Overview (Everyone)
 [CoverMyMeds](https://www.covermymeds.com/main/) is a healthcare technology company that aims to improve patients' access to medications by simplifying the process of connecting with the healthcare network. It can speed up the time for patients to receive therapy and reduce the number of prescriptions that will not be approved by the health insurance payers. Furthermore, it provides the electronic prior authorization (ePA) service for the medical claims rejected by payers, which could tremendously boost the process of PA filing with a convenient portal-based experience. 
 
+![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/claim_approval_process.png)
+
 Taking advantage of the historical medical data associated with patients' claims and PAs, it is possible to extract valuable information and make practical applications to benefit customers. For example, we can infer payers' formulary of drugs and how payers make decisions based on it and medical prescriptions.
 
-Through this project, we provide **Medical Evaluation Prophet (MedEvalPro)**, a forecasting tool that enables healthcare providers to make efficient decisions on whether or not a PA is needed, significantly enhance the chance of PA approval, and predict the trend of future demands on PAs. We utilitze the mock data of medical claims provided by CoverMyMeds to perform the following tasks:
+Through this project, we provide **Medical Evaluation Prophet (MedEvalPro)**, a forecasting tool that enables healthcare providers to make efficient decisions on whether or not a PA is needed, significantly enhance the chance of PA approval, and predict the trend of future demands on PAs. We use the data provided by CoverMyMeds to:
 
-* *Discover the formulary of certain drugs for payers.*
-* *Infer which types of medical claims will be approved by payers.*
-* *Predict whether a PA for rejected claims will be approved by payers.*
-* *Forecast future volume of PAs.*
-
+![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/project_outline.png)
 
 
 ## Dataset (Po-Wen)
