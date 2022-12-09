@@ -100,7 +100,7 @@ Can we predict whether a claim will be directly approved by payers? If the answe
 
 As there are only 2 relevant features (`bin_no` and `drug`) and the final label (i.e., `pharmacy_claim_approval`) may be affected by many factors not included in the dataset, it could be difficult to make a robust classification. 
 
-Surprisingly, it turns out that we can actually do an excellent job on this task! We find that most classification models can achieve 94\% of accuracy in predicting the claim approval. We find that, this is because a claim will {\it never} be approved if its drug is not on a payer’s plan or is not preferred (i.e., those drugs associated with reject code `70` or `75` in Fig.~\ref{tab}). We conclude that `bin` and `drug` are robust predictors for the chance of claim approval!
+Surprisingly, it turns out that we can actually do an excellent job on this task! We find that most classification models can achieve 94\% of accuracy in predicting the claim approval. We find that, this is because a claim will *never* be approved if its drug is not on a payer’s plan or is not preferred (i.e., those drugs associated with reject code `70` or `75` in the formulary table). We conclude that `bin` and `drug` are robust predictors for the chance of claim approval!
 
 <img src="https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/all_claims_cv_scores_algorithm.jpg" width="600">
 
