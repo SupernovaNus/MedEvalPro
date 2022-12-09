@@ -88,7 +88,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * 'Feedforward neural network': We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
 `rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number`
 
-The feedforward neural networkThis consists of two layers of 50 and 20 layers respectively and uses the rectifier function as the activation function. This is the best machine learnign model among all the models we have tried. It acheives an F1 score 0.86 when trained on 80% of the dataset.
+The feedforward neural networkThis consists of two layers of 50 and 20 layers respectively and uses the rectifier function as the activation function. This is our best machine learning model: It acheives an F1 score 0.86 when trained on 80% of the dataset.
 
 **The Metric used for the Comparison of all Models:**
 
