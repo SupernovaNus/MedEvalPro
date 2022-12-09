@@ -50,7 +50,8 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 
 ## Formulary
-`reject_code`: 
+
+Claims with specific drugs could be rejected for various reasons. In our data, there are three reject codes: 
 
 * `70` = drug is not covered by plan and is not on the payer’s formulary
 * `75` = drug is on the payer’s formulary but is not preferred - PA required
@@ -58,7 +59,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * `NaN` = approved
 
 
-**Results:**
+We are able to discover the formulary of each payer. We find all drugs (`A`, `B`, `C`) are associated with different reject codes (`70`, `75`, `76`) by bin `417380`, `417614`, `417740`, while bin `999001` rejects all drugs by code `76`. This implies that the plans of bin `999001` cover all three types of drugs, but may have relative low limit on the number of fills for drugs.  
 
 
 <img src="https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_1.png" width="500">
@@ -66,11 +67,10 @@ File `bridge.csv` provides a table that bridges all information associated with 
 <img src="https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_3.png" width="500">
 <img src="https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_4.png" width="500">
 
+Here we show a table for each health insurance payer's (labeled by `BIN`) formulary. The drugs associated with code `70` or `75` (dark blue blocks) will never be approved at the level of pharmacy claim.
 <img src="https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/formulary_table.png" width="900">
 
 
-
-**Most rejected claims were rejected with code 70**
 
 
 ## Classification 
