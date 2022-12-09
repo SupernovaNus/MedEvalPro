@@ -1,5 +1,7 @@
 ![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/MedEvalPro_graphic.png)
-# A forecasting tool for medical decisions
+## The Erdös Institute Data Science Bootcamp, Fall 2022
+Ismail Abouamal, Po-Wen Chang, Özkan Demir, Axel La Salle, Victoria Uribe
+
 
 ## Project Overview (Everyone)
 [CoverMyMeds](https://www.covermymeds.com/main/) is a healthcare technology company that aims to improve patients' access to medications by simplifying the process of connecting with the healthcare network. It can speed up the time for patients to receive therapy and reduce the number of prescriptions that will not be approved by the health insurance payers. Furthermore, it provides the electronic prior authorization (ePA) service for the medical claims rejected by payers, which could tremendously boost the process of PA filing with a convenient portal-based experience. 
@@ -15,7 +17,7 @@ Through this project, we provide **Medical Evaluation Prophet (MedEvalPro)**, a 
 
 ## Dataset (Po-Wen)
 
-The dataset we use in this project contains information of around 1.3 million claims. For each claim, the following features are provided in file `dim_claims.csv`:
+The synthetic dataset we use in this project contains information of around 1.3 million claims. For each claim, the following features are provided in file `dim_claims.csv`:
 
 * `dim_claim_id`: The unique identification number of the claim, which ranges from `1` to `1335576`.
 * `bin`: The BIN identification number of the payer for the claim. There are 4 different BINs: `417380`, `417740`, `417614`, and `999001`.
@@ -111,30 +113,15 @@ We observe that the contingency table built from all features except "correct_di
 * Best models/results
 
 ## Future directions (Everyone)
-* What would we do if?
-
-* `Convoluntional neural network`: The feedforward neural network we built 
-
-
-
----
-Useful Markdown syntax
----
-
-*asterisks*
-
-**asterisks**
-
-**_asterisks_**
-
-~~scratch~~
-
-Inline `code`
+**Convolutional Neural Network (CNN):**
+* Transform the input array corresponding to any given claim to an image-like input
+* Use different sequential treatments throughout the different layers of the network to make the model more sensitive to certain key features
+* _We believe this model would achieve a better F1 score_
 
 
-```
-Test.
-```
+**Tune our Models**
+* Highly non-trivial task for structured data (i.e. our time series data)
+* Explore how to create better end-to-end pipelines for easier forecasting and visualization for budgeting needs
 
-1. First ordered list item
-2. Another item
+
+
