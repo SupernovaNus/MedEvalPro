@@ -59,9 +59,13 @@ File `bridge.csv` provides a table that bridges all information associated with 
 **Results:**
 
 
-**45% of rejected claims were rejected with code 70**
+![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_1.png)
+![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_2.png)
+![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_3.png)
+![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_4.png)
 
-![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_plots.png)
+
+**45% of rejected claims were rejected with code 70**
 
 
 ## Classification (Ozkan, Ismail, Po-Wen)
