@@ -56,16 +56,16 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 ## Classification (Ozkan, Ismail, Po-Wen)
 * Key question: How to predict if a PA will be approved or not?
-* Metric used: In our contest, it is crucial for any model to minimize the false positives since it safer 
-* Models:
+* Metric used: In our context false positive is worse than a false negative, as classifying a to-be-rejected PA claim as otherwise and filing the PA claim would put an unnecessary cost on the company. So, precision is our most important metric to maximize. However, the naive model that rejects every PA claim has 100% precision, so we need another metric. We decided to use a weighted harmonic mean of precision and recall, weighed more on the precision side (namely 2-to-1), which can be thought of as a weighted f1 score.
 
-* `Support Vector Machine Classifier`:
+* Model used:
+
+* Best model:
+
 * `Feedforward neural network`: We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
-`rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`, `is_holiday`, `is_weekday`, `is_workday`
+`rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number`
 
-This model consists of two layers of 50 and 20 layers respectively and uses the ‘relu’ function as the activation function. This model acheives an F1 score (...) of : when trained ... The performance of this simple neural network is comparable to almost every model we have tried.
-
-* `Random forest with GridSearch`:
+This model consists of two layers of 50 and 20 layers respectively and uses the ‘relu’ function as the activation function. This model acheives an F1 score 0.86 when trained on 80% of the dataset.
 
 In addition to these machine learning models, we computed PA approval rates using contingency tables and build a model by using different thresholds with the approval rates. We observed that using all six categorical features we used in the above models results in a contingency table with cells with 0 counts, and those cells cannot be used to compute approval rates. So, we used the feature importance scores we get from the best model to get an importance order among the subsets of features, and used it to get a contingency table with a nonempty count for any given feature string. The following is the top 4 feature subsets in this order:
 **All features > All features except "correct_diagnosis" > All features except "bin_no" > All features except "correct_diagnosis" & "bin_no"**
