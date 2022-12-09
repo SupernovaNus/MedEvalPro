@@ -88,7 +88,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * 'Feedforward neural network': We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
 `rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number`
 
-The feedforward neural networkThis consists of two layers of 50 and 20 layers respectively and uses the rectifier function as the activation function. This is our best machine learning model: It acheives an F1 score 0.86 when trained on 80% of the dataset.
+The feedforward neural network consists of two layers of 50 and 20 nodes respectively and uses the rectifier function as the activation function. This is our best machine learning model: It acheives an F1 score 0.86 when trained on 80% of the dataset.
 
 **Embedding of the last layer of the neural network:**
 
@@ -102,6 +102,8 @@ We used the TSNE (t-distributed stochastic neighbor embedding) algorithm to redu
 
 **The Metric used for the Comparison of all Models:**
 
+![alt text](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/AllModels.png)
+
 We have the results comparing above models on a single train-test split on the whole dataset in classification/AllModelsComparison.ipynb
 In summary, for our metric to choose the final model, we did not use accuracy because the dataset was imbalanced, having 73% PA approval rate overall. For this classification problem, false positive is worse than a false negative, as classifying a to-be-rejected PA claim as otherwise and filing the PA claim would put an unnecessary cost on the company. So, precision is our most important metric to maximize. However, the naive model that rejects every PA claim has 100% precision, so we need another metric. We decided to use a *weighted harmonic mean of precision and recall, weighed more on the precision side (2-to-1)*, which can be thought of as a *weighted f1 score*. With this metric, the *Feedforward neural network model* turned out to have the best performance.
 
@@ -111,7 +113,9 @@ In addition to these machine learning models, we computed PA approval rates usin
 We observed that using all six categorical features we used in the above models results in a contingency table with cells with 0 counts, and those cells cannot be used to compute approval rates. So, we used the feature importance scores we get from the best model to get an importance order among the subsets of features, and used it to get a contingency table with a nonempty count for any given feature string. The following is the top 4 feature subsets in this order:
 *All features > All features except "correct_diagnosis" > All features except "bin_no" > All features except "correct_diagnosis" & "bin_no"*
 
-We observe that the contingency table built from all features except "correct_diagnosis" & "bin_no" is full, so we only needed to go this deep in the order to get all the approval rates. Then we get the weighted f1 scores for models with different thresholds, and shown that the model with 60% threshold outperforms all other machine learning mothers we have investigated so far. 
+![alt text](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/ContingencyTableResults.png)
+
+We observe that the contingency table built from all features except "correct_diagnosis" & "bin_no" is full, so we only needed to go this deep in the order to get all the approval rates. Then we get the weighted f1 scores for models with different thresholds, and shown that the model with 60% threshold outperforms all other machine learning mothers we have investigated so far. This is caused by the fully categorical nature of the dataset.
 
 ## Time series analysis (Axel)
 * Key question: How to predict the claim/PA volumes in the future?
