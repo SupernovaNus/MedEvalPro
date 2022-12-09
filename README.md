@@ -88,7 +88,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * 'Feedforward neural network': We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
 `rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number`
 
-The feedforward neural network consists of two layers of 50 and 20 nodes respectively and uses the rectifier function as the activation function. This is our best machine learning model: It acheives an F1 score 0.86 when trained on 80% of the dataset.
+The feedforward neural network consists of two layers of 50 and 20 nodes respectively and uses the rectifier function as the activation function. This is our best machine learning model: It achieves an F1 score 0.86 when trained on 80% of the dataset.
 
 **Embedding of the last layer of the neural network:**
 
@@ -115,7 +115,7 @@ We observed that using all six categorical features we used in the above models 
 
 ![alt text](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/ContingencyTableResults.png)
 
-We observe that the contingency table built from all features except "correct_diagnosis" & "bin_no" is full, so we only needed to go this deep in the order to get all the approval rates. Then we get the weighted f1 scores for models with different thresholds, and shown that the model with 60% threshold outperforms all other machine learning mothers we have investigated so far. This is caused by the fully categorical nature of the dataset.
+We observe that the contingency table built from all features except "correct_diagnosis" & "bin_no" is full, so we only needed to go this deep in the order to get all the approval rates. Then we get the weighted f1 scores for models with different thresholds, and show that the model with 60% threshold outperforms all other machine learning mothers we have investigated so far. This is caused by the fully categorical nature of the dataset.
 
 ## Time series analysis (Axel)
 * Key question: How to predict the claim/PA volumes in the future?
