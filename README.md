@@ -67,6 +67,11 @@ File `bridge.csv` provides a table that bridges all information associated with 
 ![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_4.png)
 
 
+
+![alt text](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/formulary_table.png)
+
+
+
 **Most rejected claims were rejected with code 70**
 
 
@@ -85,7 +90,16 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * 'Linear Discriminant Analysis': Default
 * 'CatBoost Classifier': See classification/CatBoostGridSearchCV.ipynb
 * 'XGB Classifier': See classification/XGBoostGridSearchCV.ipynb
-* 'Feedforward neural network': We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
+* 'Feedforward neural network'
+
+
+
+**Embedding of the last layer of the neural network:**
+![alt text](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/ContingencyTableResults.png)
+
+
+
+We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
 `rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number`
 
 The feedforward neural network consists of two layers of 50 and 20 nodes respectively and uses the rectifier function as the activation function. This is our best machine learning model: It achieves an F1 score 0.86 when trained on 80% of the dataset.
