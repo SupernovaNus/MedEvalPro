@@ -47,11 +47,22 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 
 
-
-
 ## Formulary (Victoria)
-* Key question: What is the formulary of each payer?
-* Results
+`reject_code`: 
+
+* `70` = drug is not covered by plan and is not on the payer’s formulary
+* `75` = drug is on the payer’s formulary but is not preferred - PA required
+* `76` = drug is covered but that the plan’s limit on the number of fills for that drug have been met
+* `NaN` = approved
+
+
+**Results:**
+
+
+**45% of rejected claims were rejected with code 70**
+
+![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/formulary_plots.png)
+
 
 ## Classification (Ozkan, Ismail, Po-Wen)
 * Key question: How to predict if a PA will be approved or not?
