@@ -90,7 +90,7 @@ File `bridge.csv` provides a table that bridges all information associated with 
 
 The feedforward neural networkThis consists of two layers of 50 and 20 layers respectively and uses the rectifier function as the activation function. This is our best machine learning model: It acheives an F1 score 0.86 when trained on 80% of the dataset.
 
-**Embedding of last layer of the neural network:**
+**Embedding of the last layer of the neural network:**
 
 
 ![TSNE_feedforward_network](https://user-images.githubusercontent.com/81845143/206777035-40d192db-76a2-4be9-b889-12a55669a7ee.png)
