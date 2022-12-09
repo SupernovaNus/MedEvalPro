@@ -85,7 +85,6 @@ File `bridge.csv` provides a table that bridges all information associated with 
 * 'Linear Discriminant Analysis': Default
 * 'CatBoost Classifier': See classification/CatBoostGridSearchCV.ipynb
 * 'XGB Classifier': See classification/XGBoostGridSearchCV.ipynb
-* `Support Vector Machine Classifier`:
 * `Feedforward neural network`: We used a feedforward neural network with two hidden layers. The input is an 8 dimensional array containing the categorical entries corresponding to the following features:
 `rejected_code`, `drug_type`, `correct_diagnosis`, `tried_and_failed`, `contraindication`,`bin_number`
 
