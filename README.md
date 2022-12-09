@@ -1,4 +1,5 @@
-# MedEvalPro: A forecasting tool for medical decisions
+![alt text](https://github.com/SupernovaNus/CoverMyMeds_project/blob/main/Images/MedEvalPro_graphic.png)
+# A forecasting tool for medical decisions
 
 ## Project Overview (Everyone)
 [CoverMyMeds](https://www.covermymeds.com/main/) is a healthcare technology company that aims to improve patients' access to medications by simplifying the process of connecting with the healthcare network. It can speed up the time for patients to receive therapy and reduce the number of prescriptions that will not be approved by the health insurance payers. Furthermore, it provides the electronic prior authorization (ePA) service for the medical claims rejected by payers, which could tremendously boost the process of PA filing with a convenient portal-based experience. 
