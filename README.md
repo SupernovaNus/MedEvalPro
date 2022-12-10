@@ -142,12 +142,42 @@ We used the TSNE (t-distributed stochastic neighbor embedding) algorithm to redu
 
 
 ## Time series analysis
-* Key question: How to predict the claim/PA volumes in the future?
-* Models:
+* Motivation: If a claim is rejected, then regardless of the rejection code, an ePA can be started to ensure the patient recieves the care they need. At CoverMyMeds, an automated system is used to generate ePAs. From a financial perspective, ePA volume is a predictor of revenue. We forecast future volume (at the daily/monthly/yearly level) using time series analysis to help with budgeting. We often see ePA volume at its highest during workdays, and its lowest during holiday seasons. We also see peaks in volume around the start of the year, which is when many PAs expire and new ones will be resubmitted.
 
+* Data:
 
+![d_ePA](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/Daily%20ePA%20Volume.png)
 
-* Best models/results
+![m_ePA](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/Monthly%20ePA%20Volume.png)
+
+* Key question: 
+
+  How to forecast ePA volumes in the future?
+  We seek to find the best models for future forecasting given historical ePA volume data.
+
+* Best models:  
+
+  For daily forecasting - ETS (https://otexts.com/fpp2/ets-forecasting.html). 
+
+  For monthly forecasting - Prophet (https://facebook.github.io/prophet/). 
+
+  Using exogenous features - Auto ARIMA (https://www.sktime.org/en/stable/api_reference/auto_generated/sktime.forecasting.arima.AutoARIMA.html)
+  
+* Results:  
+
+  Future forecast - daily level
+  ![d_ff](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/dailyFutureForecast.png)  
+  
+  Future forecast - monthly level
+  ![m_ff](https://github.com/SupernovaNus/MedEvalPro/blob/main/Images/MonthlyFutureForecast.png)
+  
+  * Performance Summary: 
+  
+    ETS - 0.0678 (Mean Absolute Percentage Error). 
+    
+    Prophet - 0.1104 (Mean Absolute Percentage Error). 
+    
+    AutoRegressive LSTM - 0.1991 (Mean Absolute Error). 
 
 ## Future Work 
 **Convolutional Neural Network (CNN):**
